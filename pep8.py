@@ -266,8 +266,8 @@ def blank_lines(logical_line, blank_lines, indent_level, line_number,
             if not (blank_lines or previous_indent_level < indent_level or
                     DOCSTRING_REGEX.match(previous_logical)):
                 yield 0, "E301 expected 1 blank line, found 0"
-        elif blank_lines != 2:
-            yield 0, "E302 expected 2 blank lines, found %d" % blank_lines
+        elif blank_lines != 1:
+            yield 0, "E302 expected 1 blank lines, found %d" % blank_lines
 
 
 def extraneous_whitespace(logical_line):
