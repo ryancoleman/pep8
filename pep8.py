@@ -357,7 +357,7 @@ def missing_whitespace(logical_line):
 def indentation(logical_line, previous_logical, indent_char,
                 indent_level, previous_indent_level):
     r"""
-    Use 4 spaces per indentation level.
+    Use 2 spaces per indentation level.
 
     For really old code that you don't want to mess up, you can continue to
     use 8-space tabs.
@@ -372,8 +372,8 @@ def indentation(logical_line, previous_logical, indent_char,
     Okay: a = 1\nb = 2
     E113: a = 1\n    b = 2
     """
-    if indent_char == ' ' and indent_level % 4:
-        yield 0, "E111 indentation is not a multiple of four"
+    if indent_char == ' ' and indent_level % 2:
+        yield 0, "E111 indentation is not a multiple of two"
     indent_expect = previous_logical.endswith(':')
     if indent_expect and indent_level <= previous_indent_level:
         yield 0, "E112 expected an indented block"
