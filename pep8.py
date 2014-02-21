@@ -71,7 +71,7 @@ else:
                                   os.path.expanduser('~/.config'), 'pep8')
 PROJECT_CONFIG = ('setup.cfg', 'tox.ini', '.pep8')
 TESTSUITE_PATH = os.path.join(os.path.dirname(__file__), 'testsuite')
-MAX_LINE_LENGTH = 79
+MAX_LINE_LENGTH = 80  # seriously, this is fine
 REPORT_FORMAT = {
     'default': '%(path)s:%(row)d:%(col)d: %(code)s %(text)s',
     'pylint': '%(path)s:%(row)d: [%(code)s] %(text)s',
