@@ -547,7 +547,7 @@ def continued_indentation(logical_line, tokens, indent_level, hang_closing,
 
         last_token_multiline = (start[0] != end[0])
 
-    if indent_next and expand_indent(line) == indent_level + 4:
+    if indent_next and expand_indent(line) == indent_level + 2:
         yield (last_indent, "E125 continuation line does not distinguish "
                "itself from next logical line")
 
