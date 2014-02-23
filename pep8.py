@@ -71,7 +71,8 @@ else:
                                   os.path.expanduser('~/.config'), 'pep8')
 PROJECT_CONFIG = ('setup.cfg', 'tox.ini', '.pep8')
 TESTSUITE_PATH = os.path.join(os.path.dirname(__file__), 'testsuite')
-MAX_LINE_LENGTH = 80  # seriously, this is fine
+MAX_LINE_LENGTH = 80  # seriously, this is fine. if you don't go over, you
+#never see the glyph ($) at the end of the line, so 80 is okay, not 79
 REPORT_FORMAT = {
     'default': '%(path)s:%(row)d:%(col)d: %(code)s %(text)s',
     'pylint': '%(path)s:%(row)d: [%(code)s] %(text)s',
@@ -150,7 +151,7 @@ def tabs_obsolete(physical_line):
 
 
 def trailing_whitespace(physical_line):
-    r"""
+    """
     JCR: Trailing whitespace is superfluous.
     FBM: Except when it occurs as part of a blank line (i.e. the line is
          nothing but whitespace). According to Python docs[1] a line with only
@@ -202,12 +203,12 @@ def missing_newline(physical_line):
 
 def maximum_line_length(physical_line, max_line_length):
     """
-    Limit all lines to a maximum of 79 characters.
+    Limit all lines to a maximum of 80 characters.
 
     There are still many devices around that are limited to 80 character
     lines; plus, limiting windows to 80 characters makes it possible to have
     several windows side-by-side.  The default wrapping on such devices looks
-    ugly.  Therefore, please limit all lines to a maximum of 79 characters.
+    ugly.  Therefore, please limit all lines to a maximum of 80 characters.
     For flowing long blocks of text (docstrings or comments), limiting the
     length to 72 characters is recommended.
 
