@@ -85,3 +85,10 @@ Links
 * `Read the documentation <http://pep8.readthedocs.org/>`_
 
 * `Fork me on GitHub <http://github.com/jcrocholl/pep8>`_
+
+Tips
+----
+
+Remove all trailing blank lines from your code:
+
+sed -i -e :a -e '/^\n*$/{$d;N;ba' -e '}' *.py

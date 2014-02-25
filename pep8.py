@@ -151,7 +151,7 @@ def tabs_obsolete(physical_line):
 
 
 def trailing_whitespace(physical_line):
-    """
+    r"""
     JCR: Trailing whitespace is superfluous.
     FBM: Except when it occurs as part of a blank line (i.e. the line is
          nothing but whitespace). According to Python docs[1] a line with only
