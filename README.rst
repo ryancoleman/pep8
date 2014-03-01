@@ -92,3 +92,7 @@ Tips
 Remove all trailing blank lines from your code:
 
 sed -i -e :a -e '/^\n*$/{$d;N;ba' -e '}' *.py
+
+Remove all trailing whitespace from each line:
+
+sed -i 's/[ ]*$//g' *.py
